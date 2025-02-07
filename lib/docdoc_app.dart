@@ -5,6 +5,8 @@ import 'package:docdoc_app/core/theming/color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/helpers/constant.dart';
+
 class DocDocApp extends StatelessWidget {
   const DocDocApp({super.key, required this.appRouter});
 final AppRouter appRouter;
@@ -20,7 +22,7 @@ final AppRouter appRouter;
           scaffoldBackgroundColor: Colors.white,
         ),
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.onBoardingScreen,
+        initialRoute: isLoggedIn ? Routes.homeScreen : Routes.loginScreen,
         onGenerateRoute: appRouter.generateRoute,
       ),
     );
