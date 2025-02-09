@@ -24,16 +24,17 @@ class DioFactory {
       return dio!;
     }
   }
-static void addDioHeader() {
+static void addDioHeader() async{
     dio?.options.headers={
-      "Accept": "application/json",
-      "Authorization": "Bearer ${SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}",
+      'Accept': 'application/json',
+  'Authorization':
+  'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}',
     };
 }
 
 static void setTokenAfterLogin(String token) {
   dio?.options.headers={
-    "Authorization": "Bearer $token",
+    'Authorization': 'Bearer $token',
   };
 }
   static void addDioInterceptor() {

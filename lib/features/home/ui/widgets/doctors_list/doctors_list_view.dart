@@ -1,7 +1,8 @@
 import 'package:docdoc_app/features/home/data/models/specializations_response_model.dart';
-import 'package:docdoc_app/features/home/ui/widgets/doctors_list_view_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'doctors_list_view_item.dart';
 
 class DoctorsListView extends StatelessWidget {
   const DoctorsListView({super.key,this.doctorsList});
